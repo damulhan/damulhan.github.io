@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Day 6 – Tests | 프로그래밍 인 액션</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-FZZE483ETN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-FZZE483ETN');
+    </script>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.17886239.css" as="style"><link rel="preload" href="/assets/js/app.e020f7bd.js" as="script"><link rel="preload" href="/assets/js/8.f8a27090.js" as="script"><link rel="preload" href="/assets/js/33.59c1939e.js" as="script"><link rel="prefetch" href="/assets/js/10.6fce9f60.js"><link rel="prefetch" href="/assets/js/11.2d17f5eb.js"><link rel="prefetch" href="/assets/js/12.bf59733f.js"><link rel="prefetch" href="/assets/js/13.a8b52d9b.js"><link rel="prefetch" href="/assets/js/14.c4af07a0.js"><link rel="prefetch" href="/assets/js/15.3d856255.js"><link rel="prefetch" href="/assets/js/16.588eccab.js"><link rel="prefetch" href="/assets/js/17.24b16851.js"><link rel="prefetch" href="/assets/js/18.a6039819.js"><link rel="prefetch" href="/assets/js/19.a4250e41.js"><link rel="prefetch" href="/assets/js/2.2e88546e.js"><link rel="prefetch" href="/assets/js/20.9ec3356e.js"><link rel="prefetch" href="/assets/js/21.c9b3acba.js"><link rel="prefetch" href="/assets/js/22.9f604d6b.js"><link rel="prefetch" href="/assets/js/23.40204a70.js"><link rel="prefetch" href="/assets/js/24.676de2f8.js"><link rel="prefetch" href="/assets/js/25.b990bbc9.js"><link rel="prefetch" href="/assets/js/26.e1d6b8b2.js"><link rel="prefetch" href="/assets/js/27.f39b7922.js"><link rel="prefetch" href="/assets/js/28.85f2eea3.js"><link rel="prefetch" href="/assets/js/29.f4594166.js"><link rel="prefetch" href="/assets/js/3.50da57f6.js"><link rel="prefetch" href="/assets/js/30.a6760802.js"><link rel="prefetch" href="/assets/js/31.338010b8.js"><link rel="prefetch" href="/assets/js/32.e6b70ee6.js"><link rel="prefetch" href="/assets/js/34.583faad6.js"><link rel="prefetch" href="/assets/js/35.2284c2f2.js"><link rel="prefetch" href="/assets/js/36.5c184555.js"><link rel="prefetch" href="/assets/js/37.211de6f3.js"><link rel="prefetch" href="/assets/js/38.d5267f05.js"><link rel="prefetch" href="/assets/js/39.a4f11fcb.js"><link rel="prefetch" href="/assets/js/4.8b550d71.js"><link rel="prefetch" href="/assets/js/40.fce01b66.js"><link rel="prefetch" href="/assets/js/41.f6faa401.js"><link rel="prefetch" href="/assets/js/42.9526cc90.js"><link rel="prefetch" href="/assets/js/43.596505b1.js"><link rel="prefetch" href="/assets/js/44.7bb9afee.js"><link rel="prefetch" href="/assets/js/45.89ab27ec.js"><link rel="prefetch" href="/assets/js/46.798fa05d.js"><link rel="prefetch" href="/assets/js/47.f22eedc4.js"><link rel="prefetch" href="/assets/js/48.4e539c23.js"><link rel="prefetch" href="/assets/js/49.e0dcf2cc.js"><link rel="prefetch" href="/assets/js/5.c77d8215.js"><link rel="prefetch" href="/assets/js/50.8fd5c00e.js"><link rel="prefetch" href="/assets/js/51.10a49966.js"><link rel="prefetch" href="/assets/js/52.c24c9aa6.js"><link rel="prefetch" href="/assets/js/53.74e79606.js"><link rel="prefetch" href="/assets/js/54.a3a328dc.js"><link rel="prefetch" href="/assets/js/55.0a3d399c.js"><link rel="prefetch" href="/assets/js/56.2f14e2d2.js"><link rel="prefetch" href="/assets/js/57.6c246fdc.js"><link rel="prefetch" href="/assets/js/58.4140c313.js"><link rel="prefetch" href="/assets/js/59.01d487f7.js"><link rel="prefetch" href="/assets/js/6.a6e440e7.js"><link rel="prefetch" href="/assets/js/60.0446ff28.js"><link rel="prefetch" href="/assets/js/61.d5b6b1a7.js"><link rel="prefetch" href="/assets/js/62.dc942955.js"><link rel="prefetch" href="/assets/js/63.67a66c62.js"><link rel="prefetch" href="/assets/js/64.5a331cdf.js"><link rel="prefetch" href="/assets/js/65.5e04463c.js"><link rel="prefetch" href="/assets/js/66.cc32db40.js"><link rel="prefetch" href="/assets/js/67.3a6502c7.js"><link rel="prefetch" href="/assets/js/68.e543b947.js"><link rel="prefetch" href="/assets/js/69.c6c56c1c.js"><link rel="prefetch" href="/assets/js/7.fb50de22.js"><link rel="prefetch" href="/assets/js/70.4f7ed14a.js"><link rel="prefetch" href="/assets/js/71.8cf0b0df.js"><link rel="prefetch" href="/assets/js/9.c9de3d13.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.17886239.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">프로그래밍 인 액션</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/clojure/" class="nav-link router-link-active">
+  Clojure
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/clojure/" class="nav-link router-link-active">
+  Clojure
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>clojure books</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/clojure/clojure_distilled" class="sidebar-heading clickable open"><span>Clojure 증류하기 (Clojure Distilled)</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/clojure/clojure_distilled/01-Intro.html" class="sidebar-link">서문</a></li><li><a href="/clojure/clojure_distilled/02-Immutable.html" class="sidebar-link">함수형 언어의 이점</a></li><li><a href="/clojure/clojure_distilled/11-Clojure_In_Action.html" class="sidebar-link">클로저 인 액션(Clojure In Action)</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/clojure/clojure_spells" class="sidebar-heading clickable"><span>Clojure로 주문읽기(casting spells in clojure)</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>7 days of clojure</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>columns &amp; lectures</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>talks</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="day-6-tests"><a href="#day-6-tests" class="header-anchor">#</a> Day 6 – Tests</h1> <p>The Clojure main library includes a test framework written by Stuart Sierra and the test framework is under the <code>clojure.test</code> namespace.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">ns</span> seven-days-of-clojure.tests
+  <span class="token punctuation">(</span><span class="token symbol">:use</span> clojure.test<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>Let's look at some examples.</p> <h3 id="is"><a href="#is" class="header-anchor">#</a> is</h3> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">ns</span> seven-days-of-clojure.tests
+  <span class="token punctuation">(</span><span class="token symbol">:use</span> clojure.test<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">5</span> <span class="token punctuation">(</span><span class="token keyword">+</span> <span class="token number">2</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; FAIL in () (NO_SOURCE_FILE:1)</span>
+<span class="token comment">;; expected: (= 5 (+ 2 2))</span>
+<span class="token comment">;;   actual: (not (= 5 4))</span>
+<span class="token comment">;; false</span>
+
+<span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">7</span> <span class="token punctuation">(</span><span class="token keyword">+</span> <span class="token number">3</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; true</span>
+</code></pre></div><p><code>is</code> takes an optional second argument, a string describing the assertion.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token boolean">false</span> <span class="token punctuation">(</span><span class="token keyword">&gt;</span> <span class="token number">49</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token string">&quot;False arithmetic test.&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; FAIL in () (NO_SOURCE_FILE:1)</span>
+<span class="token comment">;; False arithmetic test.</span>
+<span class="token comment">;; expected: (= false (&gt; 49 7))</span>
+<span class="token comment">;;   actual: (not (= false true))</span>
+<span class="token comment">;; false</span>
+</code></pre></div><h3 id="testing"><a href="#testing" class="header-anchor">#</a> testing</h3> <p>In addition, you can document groups of assertions with the
+<code>testing</code> macro.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token function">testing</span> <span class="token string">&quot;Arithmetic&quot;</span>
+  <span class="token punctuation">(</span><span class="token function">testing</span> <span class="token string">&quot;with positive integers&quot;</span>
+    <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">4</span> <span class="token punctuation">(</span><span class="token keyword">+</span> <span class="token number">2</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">7</span> <span class="token punctuation">(</span><span class="token keyword">+</span> <span class="token number">3</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">(</span><span class="token function">testing</span> <span class="token string">&quot;with negative integers&quot;</span>
+    <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> -<span class="token number">4</span> <span class="token punctuation">(</span><span class="token keyword">+</span> -<span class="token number">2</span> -<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> -<span class="token number">1</span> <span class="token punctuation">(</span><span class="token keyword">+</span> <span class="token number">3</span> -<span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; true</span>
+</code></pre></div><h3 id="deftest"><a href="#deftest" class="header-anchor">#</a> deftest</h3> <p>To set tests apart from the rest of your code, even in a different namespace, use the <code>deftest</code> function.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token function">deftest</span> is-one-less-than-two
+  <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">1</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">deftest</span> is-<span class="token number">42</span>-equals-<span class="token number">42</span>
+  <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">42</span> <span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">deftest</span> is-number-different-from-string
+  <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token punctuation">(</span><span class="token keyword">not</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token string">&quot;13&quot;</span> <span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>Note the namespace below with its functions.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">ns</span> seven-days-of-clojure.some-functions<span class="token punctuation">)</span>
+
+<span class="token comment">;; number</span>
+<span class="token punctuation">(</span><span class="token keyword">defn</span> one
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment">;; floating-point</span>
+<span class="token punctuation">(</span><span class="token keyword">defn</span> floating-point
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token number">7.7</span><span class="token punctuation">)</span>
+
+<span class="token comment">;; String</span>
+<span class="token punctuation">(</span><span class="token keyword">defn</span> language
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">(</span><span class="token keyword">str</span> <span class="token string">&quot;Clojure&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">;; boolean</span>
+<span class="token punctuation">(</span><span class="token keyword">defn</span> is-bool
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token boolean">true</span><span class="token punctuation">)</span>
+
+<span class="token comment">;; map</span>
+<span class="token punctuation">(</span><span class="token keyword">defn</span> author
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">{</span><span class="token symbol">:id</span> <span class="token string">&quot;id-01&quot;</span>
+     <span class="token symbol">:name</span> <span class="token string">&quot;author&quot;</span>
+     <span class="token symbol">:email</span> <span class="token string">&quot;author@clj.map&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">;; keyword</span>
+<span class="token punctuation">(</span><span class="token keyword">defn</span> paradigm
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token symbol">:fp</span><span class="token punctuation">)</span>
+</code></pre></div><p>Test by importing into a specific test namespace.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">ns</span> seven-days-of-clojure.tests
+  <span class="token punctuation">(</span><span class="token symbol">:require</span> <span class="token punctuation">[</span>clojure.test <span class="token symbol">:refer</span> <span class="token symbol">:all</span><span class="token punctuation">]</span>
+            <span class="token punctuation">[</span>seven-days-of-clojure.some-functions <span class="token symbol">:refer</span> <span class="token symbol">:all</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">deftest</span> one-test
+  <span class="token punctuation">(</span><span class="token function">testing</span> <span class="token string">&quot;Should return 1.&quot;</span>
+    <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">1</span> <span class="token punctuation">(</span><span class="token function">seven-days-of-clojure.some-functions/one</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">deftest</span> floating-point-test
+  <span class="token punctuation">(</span><span class="token function">testing</span> <span class="token string">&quot;Should return 7.7.&quot;</span>
+    <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">7.7</span> <span class="token punctuation">(</span><span class="token function">seven-days-of-clojure.some-functions/floating-point</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">deftest</span> language-test
+  <span class="token punctuation">(</span><span class="token function">testing</span> <span class="token string">&quot;Should return Clojure.&quot;</span>
+    <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token string">&quot;Clojure&quot;</span> <span class="token punctuation">(</span><span class="token function">seven-days-of-clojure.some-functions/language</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">deftest</span> is-bool-test
+  <span class="token punctuation">(</span><span class="token function">testing</span> <span class="token string">&quot;Should return true.&quot;</span>
+    <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token boolean">true</span> <span class="token punctuation">(</span><span class="token function">seven-days-of-clojure.some-functions/is-bool</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">deftest</span> author-test
+  <span class="token punctuation">(</span><span class="token function">testing</span> <span class="token string">&quot;Shoud return an author {:id, :name, :email}.&quot;</span>
+    <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token punctuation">{</span><span class="token symbol">:id</span> <span class="token string">&quot;id-01&quot;</span>
+            <span class="token symbol">:name</span> <span class="token string">&quot;author&quot;</span>
+            <span class="token symbol">:email</span> <span class="token string">&quot;author@clj.map&quot;</span><span class="token punctuation">}</span> <span class="token punctuation">(</span><span class="token function">seven-days-of-clojure.some-functions/author</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">deftest</span> paradigm-test
+  <span class="token punctuation">(</span><span class="token function">testing</span> <span class="token string">&quot;Should return :fp.&quot;</span>
+    <span class="token punctuation">(</span><span class="token function">is</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token symbol">:fp</span> <span class="token punctuation">(</span><span class="token function">seven-days-of-clojure.some-functions/paradigm</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="run-tests"><a href="#run-tests" class="header-anchor">#</a> run-tests</h3> <p>Run the tests with the <code>run-tests</code> function followed by their namespaces.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token function">run-tests</span> 'seven-days-of-clojure.tests<span class="token punctuation">)</span>
+<span class="token comment">;; Testing seven-days-of-clojure.tests</span>
+
+<span class="token comment">;; Ran 9 tests containing 9 assertions.</span>
+<span class="token comment">;; 0 failures, 0 errors.</span>
+<span class="token comment">;; {:test 9, :pass 9, :fail 0, :error 0, :type :summary}</span>
+</code></pre></div><h2 id="test-your-knowledge"><a href="#test-your-knowledge" class="header-anchor">#</a> Test your knowledge</h2> <ul><li>Create a test that checks if an argument is greater than <code>10</code>.</li> <li>Create a test that tests if the return of a function is a string with the value <code>&quot;I love learn Clojure&quot;</code>.</li> <li>Create a namespace with many different functions and test them all by importing into a specific namespace for testing.</li> <li>Build your imagination</li></ul> <h2 id="day-7-create-and-run-your-first-project"><a href="#day-7-create-and-run-your-first-project" class="header-anchor">#</a> Day 7 - Create and run your first project</h2> <p><a href="/day7">See more</a></p> <hr> <h2 id="license"><a href="#license" class="header-anchor">#</a> License</h2> <p>This project is licensed under the MIT License.</p> <p><a href="http://badges.mit-license.org" target="_blank" rel="noopener noreferrer"><img src="http://img.shields.io/:license-mit-black.svg?style=flat-square" alt="License"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e020f7bd.js" defer></script><script src="/assets/js/8.f8a27090.js" defer></script><script src="/assets/js/33.59c1939e.js" defer></script>
+  </body>
+</html>

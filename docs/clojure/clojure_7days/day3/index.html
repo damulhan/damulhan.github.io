@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Day 3 – Control flow and Recursion | 프로그래밍 인 액션</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-FZZE483ETN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-FZZE483ETN');
+    </script>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.17886239.css" as="style"><link rel="preload" href="/assets/js/app.e020f7bd.js" as="script"><link rel="preload" href="/assets/js/8.f8a27090.js" as="script"><link rel="preload" href="/assets/js/30.a6760802.js" as="script"><link rel="prefetch" href="/assets/js/10.6fce9f60.js"><link rel="prefetch" href="/assets/js/11.2d17f5eb.js"><link rel="prefetch" href="/assets/js/12.bf59733f.js"><link rel="prefetch" href="/assets/js/13.a8b52d9b.js"><link rel="prefetch" href="/assets/js/14.c4af07a0.js"><link rel="prefetch" href="/assets/js/15.3d856255.js"><link rel="prefetch" href="/assets/js/16.588eccab.js"><link rel="prefetch" href="/assets/js/17.24b16851.js"><link rel="prefetch" href="/assets/js/18.a6039819.js"><link rel="prefetch" href="/assets/js/19.a4250e41.js"><link rel="prefetch" href="/assets/js/2.2e88546e.js"><link rel="prefetch" href="/assets/js/20.9ec3356e.js"><link rel="prefetch" href="/assets/js/21.c9b3acba.js"><link rel="prefetch" href="/assets/js/22.9f604d6b.js"><link rel="prefetch" href="/assets/js/23.40204a70.js"><link rel="prefetch" href="/assets/js/24.676de2f8.js"><link rel="prefetch" href="/assets/js/25.b990bbc9.js"><link rel="prefetch" href="/assets/js/26.e1d6b8b2.js"><link rel="prefetch" href="/assets/js/27.f39b7922.js"><link rel="prefetch" href="/assets/js/28.85f2eea3.js"><link rel="prefetch" href="/assets/js/29.f4594166.js"><link rel="prefetch" href="/assets/js/3.50da57f6.js"><link rel="prefetch" href="/assets/js/31.338010b8.js"><link rel="prefetch" href="/assets/js/32.e6b70ee6.js"><link rel="prefetch" href="/assets/js/33.59c1939e.js"><link rel="prefetch" href="/assets/js/34.583faad6.js"><link rel="prefetch" href="/assets/js/35.2284c2f2.js"><link rel="prefetch" href="/assets/js/36.5c184555.js"><link rel="prefetch" href="/assets/js/37.211de6f3.js"><link rel="prefetch" href="/assets/js/38.d5267f05.js"><link rel="prefetch" href="/assets/js/39.a4f11fcb.js"><link rel="prefetch" href="/assets/js/4.8b550d71.js"><link rel="prefetch" href="/assets/js/40.fce01b66.js"><link rel="prefetch" href="/assets/js/41.f6faa401.js"><link rel="prefetch" href="/assets/js/42.9526cc90.js"><link rel="prefetch" href="/assets/js/43.596505b1.js"><link rel="prefetch" href="/assets/js/44.7bb9afee.js"><link rel="prefetch" href="/assets/js/45.89ab27ec.js"><link rel="prefetch" href="/assets/js/46.798fa05d.js"><link rel="prefetch" href="/assets/js/47.f22eedc4.js"><link rel="prefetch" href="/assets/js/48.4e539c23.js"><link rel="prefetch" href="/assets/js/49.e0dcf2cc.js"><link rel="prefetch" href="/assets/js/5.c77d8215.js"><link rel="prefetch" href="/assets/js/50.8fd5c00e.js"><link rel="prefetch" href="/assets/js/51.10a49966.js"><link rel="prefetch" href="/assets/js/52.c24c9aa6.js"><link rel="prefetch" href="/assets/js/53.74e79606.js"><link rel="prefetch" href="/assets/js/54.a3a328dc.js"><link rel="prefetch" href="/assets/js/55.0a3d399c.js"><link rel="prefetch" href="/assets/js/56.2f14e2d2.js"><link rel="prefetch" href="/assets/js/57.6c246fdc.js"><link rel="prefetch" href="/assets/js/58.4140c313.js"><link rel="prefetch" href="/assets/js/59.01d487f7.js"><link rel="prefetch" href="/assets/js/6.a6e440e7.js"><link rel="prefetch" href="/assets/js/60.0446ff28.js"><link rel="prefetch" href="/assets/js/61.d5b6b1a7.js"><link rel="prefetch" href="/assets/js/62.dc942955.js"><link rel="prefetch" href="/assets/js/63.67a66c62.js"><link rel="prefetch" href="/assets/js/64.5a331cdf.js"><link rel="prefetch" href="/assets/js/65.5e04463c.js"><link rel="prefetch" href="/assets/js/66.cc32db40.js"><link rel="prefetch" href="/assets/js/67.3a6502c7.js"><link rel="prefetch" href="/assets/js/68.e543b947.js"><link rel="prefetch" href="/assets/js/69.c6c56c1c.js"><link rel="prefetch" href="/assets/js/7.fb50de22.js"><link rel="prefetch" href="/assets/js/70.4f7ed14a.js"><link rel="prefetch" href="/assets/js/71.8cf0b0df.js"><link rel="prefetch" href="/assets/js/9.c9de3d13.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.17886239.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">프로그래밍 인 액션</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/clojure/" class="nav-link router-link-active">
+  Clojure
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/clojure/" class="nav-link router-link-active">
+  Clojure
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>clojure books</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/clojure/clojure_distilled" class="sidebar-heading clickable open"><span>Clojure 증류하기 (Clojure Distilled)</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/clojure/clojure_distilled/01-Intro.html" class="sidebar-link">서문</a></li><li><a href="/clojure/clojure_distilled/02-Immutable.html" class="sidebar-link">함수형 언어의 이점</a></li><li><a href="/clojure/clojure_distilled/11-Clojure_In_Action.html" class="sidebar-link">클로저 인 액션(Clojure In Action)</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/clojure/clojure_spells" class="sidebar-heading clickable"><span>Clojure로 주문읽기(casting spells in clojure)</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>7 days of clojure</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>columns &amp; lectures</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>talks</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="day-3-control-flow-and-recursion"><a href="#day-3-control-flow-and-recursion" class="header-anchor">#</a> Day 3 – Control flow and Recursion</h1> <p>The following function section provides examples of simple control flow and recursion.</p> <h2 id="control-flow"><a href="#control-flow" class="header-anchor">#</a> Control flow</h2> <h3 id="if"><a href="#if" class="header-anchor">#</a> if</h3> <p>In Clojure, you can only pass one expression to a branch of <code>if</code>.
+However, if you often need to pass more than one expression in real programs, combine with <code>do</code> function.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token boolean">true</span>
+  <span class="token symbol">:truthy</span>
+  <span class="token symbol">:falsey</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; :truthy</span>
+
+<span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">&gt;</span> <span class="token number">3</span> <span class="token number">2</span><span class="token punctuation">)</span>
+  <span class="token string">&quot;Higher&quot;</span>
+  <span class="token string">&quot;Lower&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; &quot;Higher&quot;</span>
+
+<span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token boolean">false</span>
+  <span class="token punctuation">(</span><span class="token keyword">println</span> <span class="token string">&quot;two&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; nill</span>
+
+<span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">odd?</span> <span class="token number">41</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token keyword">inc</span> <span class="token number">42</span><span class="token punctuation">)</span>
+    <span class="token number">42</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 43</span>
+
+<span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token boolean">true</span>
+  <span class="token punctuation">(</span><span class="token keyword">do</span> <span class="token punctuation">(</span><span class="token keyword">println</span> <span class="token string">&quot;Nice!&quot;</span><span class="token punctuation">)</span>
+      <span class="token string">&quot;Another nice expression!&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">(</span><span class="token keyword">do</span> <span class="token punctuation">(</span><span class="token keyword">println</span> <span class="token string">&quot;Boring!&quot;</span><span class="token punctuation">)</span>
+      <span class="token string">&quot;A boring expression!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; Nice!</span>
+<span class="token comment">;; user=&gt; &quot;Another nice expression!&quot;</span>
+</code></pre></div><h3 id="when"><a href="#when" class="header-anchor">#</a> when</h3> <p>The when operator is like a combination of if and do, but with no else branch.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">when</span> <span class="token boolean">true</span>
+  <span class="token punctuation">(</span><span class="token keyword">println</span> <span class="token string">&quot;Nice!&quot;</span><span class="token punctuation">)</span>
+  <span class="token string">&quot;Another nice expression!&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; Nice!</span>
+<span class="token comment">;; user=&gt; &quot;Another nice expression!&quot;</span>
+
+<span class="token punctuation">(</span><span class="token keyword">when</span> <span class="token punctuation">(</span><span class="token keyword">&gt;</span> <span class="token number">3</span> <span class="token number">2</span><span class="token punctuation">)</span>
+      <span class="token string">&quot;Higher&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; &quot;Higher&quot;</span>
+</code></pre></div><h3 id="case"><a href="#case" class="header-anchor">#</a> case</h3> <p><code>case</code> compares the value with each condition with <code>=</code> and evaluates the expression in the matched branch.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token function">case</span> <span class="token number">5</span>
+      <span class="token number">5</span> <span class="token string">&quot;c is 5&quot;</span>
+      <span class="token number">10</span> <span class="token string">&quot;c is 10&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; &quot;c is 5&quot;</span>
+
+<span class="token punctuation">(</span><span class="token function">case</span> <span class="token punctuation">(</span><span class="token keyword">inc</span> <span class="token number">7</span><span class="token punctuation">)</span>
+  <span class="token number">1</span> <span class="token string">&quot;macOS&quot;</span>
+  <span class="token number">2</span> <span class="token string">&quot;Linux&quot;</span>
+  <span class="token number">3</span> <span class="token string">&quot;Windows&quot;</span>
+  <span class="token string">&quot;Confused Travolta GIF&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; &quot;Confused Travolta GIF&quot;</span>
+</code></pre></div><h3 id="cond"><a href="#cond" class="header-anchor">#</a> cond</h3> <p>Similar to <code>case</code>,  <code>cond</code> return the associated value of the first condition that is true.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">cond</span>
+  <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">7</span> <span class="token punctuation">(</span><span class="token keyword">inc</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token boolean">false</span>
+  <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">16</span> <span class="token punctuation">(</span><span class="token keyword">*</span> <span class="token number">8</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; true</span>
+
+<span class="token comment">;; You use :whatever-you-want keyword for the default case.</span>
+<span class="token punctuation">(</span><span class="token keyword">cond</span>
+    <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">7</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;1&quot;</span>
+    <span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token keyword">&gt;</span> <span class="token number">7</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token keyword">&lt;</span> <span class="token number">7</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token string">&quot;7 is over 3 and under 10&quot;</span>
+    <span class="token symbol">:whatever-you-want</span> <span class="token string">&quot;7 is other&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; &quot;7 is over 3 and under 10&quot;</span>
+</code></pre></div><h3 id="or"><a href="#or" class="header-anchor">#</a> or</h3> <p><code>or</code> returns either the first truthy value or the last value.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">or</span> <span class="token boolean">false</span> <span class="token boolean">nil</span> <span class="token symbol">:first-word-value</span> <span class="token symbol">:second-word-value</span><span class="token punctuation">)</span>
+<span class="token comment">;; =&gt; :first-word-value</span>
+
+<span class="token punctuation">(</span><span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">0</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token string">&quot;yes&quot;</span> <span class="token string">&quot;no&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; =&gt; false</span>
+
+<span class="token punctuation">(</span><span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token keyword">=</span> <span class="token number">1</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; true</span>
+</code></pre></div><h3 id="and"><a href="#and" class="header-anchor">#</a> and</h3> <p><code>and</code> returns the first falsey value or, if no values are falsey, the last truthy value.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token string">&quot;days&quot;</span> <span class="token string">&quot;months&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; &quot;months&quot;</span>
+
+<span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token boolean">nil</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; nil</span>
+
+<span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token symbol">:a</span> <span class="token symbol">:b</span> <span class="token punctuation">(</span><span class="token keyword">and</span> <span class="token symbol">:c</span> <span class="token symbol">:d</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; :d</span>
+</code></pre></div><h2 id="recursion"><a href="#recursion" class="header-anchor">#</a> Recursion</h2> <p>A function is recursive when it calls itself within its definition.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">defn</span> fibo-recursive
+  <span class="token punctuation">[</span>n<span class="token punctuation">]</span>
+    <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token keyword">=</span> n <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token keyword">=</span> n <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      n
+        <span class="token punctuation">(</span><span class="token keyword">+</span> <span class="token punctuation">(</span><span class="token function">fibo-recursive</span> <span class="token punctuation">(</span><span class="token keyword">-</span> n <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token function">fibo-recursive</span> <span class="token punctuation">(</span><span class="token keyword">-</span> n <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">fibo-recursive</span> <span class="token number">6</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 13</span>
+</code></pre></div><h3 id="recur"><a href="#recur" class="header-anchor">#</a> recur</h3> <p><code>recur</code> is a handy tool to do recursion in Clojure.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">defn</span> fib-with-recur <span class="token punctuation">[</span>n<span class="token punctuation">]</span>
+  <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">&gt;</span> n <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token keyword">loop</span> <span class="token punctuation">[</span>x <span class="token punctuation">(</span><span class="token keyword">-</span> n <span class="token number">2</span><span class="token punctuation">)</span>
+            v <span class="token punctuation">[</span><span class="token number">0</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+      <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">&gt;</span> x <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">(</span><span class="token keyword">recur</span> <span class="token punctuation">(</span><span class="token keyword">dec</span> x<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token keyword">conj</span> v <span class="token punctuation">(</span><span class="token keyword">+</span> <span class="token punctuation">(</span><span class="token keyword">peek</span> v<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token keyword">peek</span> <span class="token punctuation">(</span><span class="token keyword">pop</span> v<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        v<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">fib-with-recur</span> <span class="token number">7</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; [0 1 1 2 3 5 8]</span>
+</code></pre></div><h3 id="loop"><a href="#loop" class="header-anchor">#</a> loop</h3> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">loop</span> <span class="token punctuation">[</span>i <span class="token number">0</span><span class="token punctuation">]</span>
+  <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">&lt;</span> i <span class="token number">10</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token keyword">recur</span> <span class="token punctuation">(</span><span class="token keyword">inc</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 10</span>
+</code></pre></div><h3 id="dotimes"><a href="#dotimes" class="header-anchor">#</a> dotimes</h3> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">dotimes</span> <span class="token punctuation">[</span>i <span class="token number">7</span><span class="token punctuation">]</span>
+         <span class="token punctuation">(</span><span class="token keyword">println</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt;</span>
+<span class="token comment">;; 0</span>
+<span class="token comment">;; 1</span>
+<span class="token comment">;; 2</span>
+<span class="token comment">;; 3</span>
+<span class="token comment">;; 4</span>
+<span class="token comment">;; 5</span>
+<span class="token comment">;; 6</span>
+<span class="token comment">;; nil</span>
+
+<span class="token punctuation">(</span><span class="token keyword">dotimes</span> <span class="token punctuation">[</span>y <span class="token number">5</span><span class="token punctuation">]</span> 
+  <span class="token punctuation">(</span><span class="token keyword">println</span> <span class="token punctuation">(</span><span class="token keyword">map</span> <span class="token operator">#</span><span class="token punctuation">(</span><span class="token keyword">inc</span> %<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token keyword">range</span> <span class="token punctuation">(</span><span class="token keyword">inc</span> y<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt;</span>
+<span class="token comment">;; (1)</span>
+<span class="token comment">;; (1 2)</span>
+<span class="token comment">;; (1 2 3)</span>
+<span class="token comment">;; (1 2 3 4)</span>
+<span class="token comment">;; (1 2 3 4 5)</span>
+<span class="token comment">;; nil</span>
+</code></pre></div><h3 id="for"><a href="#for" class="header-anchor">#</a> for</h3> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">for</span> <span class="token punctuation">[</span>letter <span class="token punctuation">[</span><span class="token symbol">:a</span> <span class="token symbol">:b</span><span class="token punctuation">]</span>
+             number <span class="token punctuation">(</span><span class="token keyword">range</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+         <span class="token punctuation">[</span>letter number<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; ([:a 0] [:a 1] [:a 2] [:b 0] [:b 1] [:b 2])</span>
+
+<span class="token punctuation">(</span><span class="token keyword">for</span> <span class="token punctuation">[</span>x <span class="token punctuation">(</span><span class="token keyword">range</span><span class="token punctuation">)</span> <span class="token symbol">:while</span> <span class="token punctuation">(</span><span class="token keyword">&lt;</span> x <span class="token number">10</span><span class="token punctuation">)</span> 
+             y <span class="token punctuation">(</span><span class="token keyword">range</span><span class="token punctuation">)</span> <span class="token symbol">:while</span> <span class="token punctuation">(</span><span class="token keyword">&lt;=</span> y x<span class="token punctuation">)</span><span class="token punctuation">]</span>
+         <span class="token punctuation">[</span>x y<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt;</span>
+<span class="token comment">;; ([0 0]</span>
+<span class="token comment">;;  [1 0] [1 1]</span>
+<span class="token comment">;;  [2 0] [2 1] [2 2]</span>
+<span class="token comment">;;  [3 0] [3 1] [3 2] [3 3]</span>
+<span class="token comment">;;  [4 0] [4 1] [4 2] [4 3] [4 4]</span>
+<span class="token comment">;;  [5 0] [5 1] [5 2] [5 3] [5 4] [5 5]</span>
+<span class="token comment">;;  [6 0] [6 1] [6 2] [6 3] [6 4] [6 5] [6 6]</span>
+<span class="token comment">;;  [7 0] [7 1] [7 2] [7 3] [7 4] [7 5] [7 6] [7 7]</span>
+<span class="token comment">;;  [8 0] [8 1] [8 2] [8 3] [8 4] [8 5] [8 6] [8 7] [8 8]</span>
+<span class="token comment">;;  [9 0] [9 1] [9 2] [9 3] [9 4] [9 5] [9 6] [9 7] [9 8] [9 9])</span>
+</code></pre></div><h2 id="test-your-knowledge"><a href="#test-your-knowledge" class="header-anchor">#</a> Test your knowledge</h2> <ul><li>Use some flow of control to determine an athlete's category.</li> <li>Calculate the factorial of a number.</li> <li>Multiply all even numbers in the range of a number until it equals itself.</li> <li>Build your imagination.</li></ul> <h2 id="day-4-functions"><a href="#day-4-functions" class="header-anchor">#</a> Day 4 - Functions</h2> <p><a href="/day4">See more</a></p> <hr> <h2 id="license"><a href="#license" class="header-anchor">#</a> License</h2> <p>This project is licensed under the MIT License.</p> <p><a href="http://badges.mit-license.org" target="_blank" rel="noopener noreferrer"><img src="http://img.shields.io/:license-mit-black.svg?style=flat-square" alt="License"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e020f7bd.js" defer></script><script src="/assets/js/8.f8a27090.js" defer></script><script src="/assets/js/30.a6760802.js" defer></script>
+  </body>
+</html>

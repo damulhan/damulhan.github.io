@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Day 5 – Namespaces | 프로그래밍 인 액션</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-FZZE483ETN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-FZZE483ETN');
+    </script>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.17886239.css" as="style"><link rel="preload" href="/assets/js/app.e020f7bd.js" as="script"><link rel="preload" href="/assets/js/8.f8a27090.js" as="script"><link rel="preload" href="/assets/js/32.e6b70ee6.js" as="script"><link rel="prefetch" href="/assets/js/10.6fce9f60.js"><link rel="prefetch" href="/assets/js/11.2d17f5eb.js"><link rel="prefetch" href="/assets/js/12.bf59733f.js"><link rel="prefetch" href="/assets/js/13.a8b52d9b.js"><link rel="prefetch" href="/assets/js/14.c4af07a0.js"><link rel="prefetch" href="/assets/js/15.3d856255.js"><link rel="prefetch" href="/assets/js/16.588eccab.js"><link rel="prefetch" href="/assets/js/17.24b16851.js"><link rel="prefetch" href="/assets/js/18.a6039819.js"><link rel="prefetch" href="/assets/js/19.a4250e41.js"><link rel="prefetch" href="/assets/js/2.2e88546e.js"><link rel="prefetch" href="/assets/js/20.9ec3356e.js"><link rel="prefetch" href="/assets/js/21.c9b3acba.js"><link rel="prefetch" href="/assets/js/22.9f604d6b.js"><link rel="prefetch" href="/assets/js/23.40204a70.js"><link rel="prefetch" href="/assets/js/24.676de2f8.js"><link rel="prefetch" href="/assets/js/25.b990bbc9.js"><link rel="prefetch" href="/assets/js/26.e1d6b8b2.js"><link rel="prefetch" href="/assets/js/27.f39b7922.js"><link rel="prefetch" href="/assets/js/28.85f2eea3.js"><link rel="prefetch" href="/assets/js/29.f4594166.js"><link rel="prefetch" href="/assets/js/3.50da57f6.js"><link rel="prefetch" href="/assets/js/30.a6760802.js"><link rel="prefetch" href="/assets/js/31.338010b8.js"><link rel="prefetch" href="/assets/js/33.59c1939e.js"><link rel="prefetch" href="/assets/js/34.583faad6.js"><link rel="prefetch" href="/assets/js/35.2284c2f2.js"><link rel="prefetch" href="/assets/js/36.5c184555.js"><link rel="prefetch" href="/assets/js/37.211de6f3.js"><link rel="prefetch" href="/assets/js/38.d5267f05.js"><link rel="prefetch" href="/assets/js/39.a4f11fcb.js"><link rel="prefetch" href="/assets/js/4.8b550d71.js"><link rel="prefetch" href="/assets/js/40.fce01b66.js"><link rel="prefetch" href="/assets/js/41.f6faa401.js"><link rel="prefetch" href="/assets/js/42.9526cc90.js"><link rel="prefetch" href="/assets/js/43.596505b1.js"><link rel="prefetch" href="/assets/js/44.7bb9afee.js"><link rel="prefetch" href="/assets/js/45.89ab27ec.js"><link rel="prefetch" href="/assets/js/46.798fa05d.js"><link rel="prefetch" href="/assets/js/47.f22eedc4.js"><link rel="prefetch" href="/assets/js/48.4e539c23.js"><link rel="prefetch" href="/assets/js/49.e0dcf2cc.js"><link rel="prefetch" href="/assets/js/5.c77d8215.js"><link rel="prefetch" href="/assets/js/50.8fd5c00e.js"><link rel="prefetch" href="/assets/js/51.10a49966.js"><link rel="prefetch" href="/assets/js/52.c24c9aa6.js"><link rel="prefetch" href="/assets/js/53.74e79606.js"><link rel="prefetch" href="/assets/js/54.a3a328dc.js"><link rel="prefetch" href="/assets/js/55.0a3d399c.js"><link rel="prefetch" href="/assets/js/56.2f14e2d2.js"><link rel="prefetch" href="/assets/js/57.6c246fdc.js"><link rel="prefetch" href="/assets/js/58.4140c313.js"><link rel="prefetch" href="/assets/js/59.01d487f7.js"><link rel="prefetch" href="/assets/js/6.a6e440e7.js"><link rel="prefetch" href="/assets/js/60.0446ff28.js"><link rel="prefetch" href="/assets/js/61.d5b6b1a7.js"><link rel="prefetch" href="/assets/js/62.dc942955.js"><link rel="prefetch" href="/assets/js/63.67a66c62.js"><link rel="prefetch" href="/assets/js/64.5a331cdf.js"><link rel="prefetch" href="/assets/js/65.5e04463c.js"><link rel="prefetch" href="/assets/js/66.cc32db40.js"><link rel="prefetch" href="/assets/js/67.3a6502c7.js"><link rel="prefetch" href="/assets/js/68.e543b947.js"><link rel="prefetch" href="/assets/js/69.c6c56c1c.js"><link rel="prefetch" href="/assets/js/7.fb50de22.js"><link rel="prefetch" href="/assets/js/70.4f7ed14a.js"><link rel="prefetch" href="/assets/js/71.8cf0b0df.js"><link rel="prefetch" href="/assets/js/9.c9de3d13.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.17886239.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">프로그래밍 인 액션</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/clojure/" class="nav-link router-link-active">
+  Clojure
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/clojure/" class="nav-link router-link-active">
+  Clojure
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>clojure books</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/clojure/clojure_distilled" class="sidebar-heading clickable open"><span>Clojure 증류하기 (Clojure Distilled)</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/clojure/clojure_distilled/01-Intro.html" class="sidebar-link">서문</a></li><li><a href="/clojure/clojure_distilled/02-Immutable.html" class="sidebar-link">함수형 언어의 이점</a></li><li><a href="/clojure/clojure_distilled/11-Clojure_In_Action.html" class="sidebar-link">클로저 인 액션(Clojure In Action)</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/clojure/clojure_spells" class="sidebar-heading clickable"><span>Clojure로 주문읽기(casting spells in clojure)</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>7 days of clojure</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>columns &amp; lectures</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>talks</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="day-5-namespaces"><a href="#day-5-namespaces" class="header-anchor">#</a> Day 5 – Namespaces</h1> <p>The namespace provides a way to organize different Clojure objects into logical groups which logical ones are commonly called the library and can be used in other namespaces.</p> <h3 id="ns"><a href="#ns" class="header-anchor">#</a> ns</h3> <p>To define a namespace, use the <code>ns</code> macro.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">ns</span> seven-days-of-clojure.example<span class="token punctuation">)</span>
+</code></pre></div><p><code>ns</code> can take <code>:require</code>, <code>:use</code>, and <code>:import</code> keyword.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">ns</span> seven-days-of-clojure.example
+  <span class="token punctuation">(</span><span class="token symbol">:require</span> <span class="token punctuation">[</span>clojure.java.io<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">(</span><span class="token symbol">:use</span> <span class="token punctuation">[</span>clojure.data<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">(</span><span class="token symbol">:import</span> <span class="token punctuation">[</span>java.util List Set<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>Typically, each <code>ns</code> references a specific file.</p> <div class="language-bash extra-class"><pre class="language-bash"><code>directory.file-name.clj
+directory.subdirectory.file-name.clj
+</code></pre></div><div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token comment">;; file-name.clj</span>
+<span class="token punctuation">(</span><span class="token keyword">ns</span> seven-days-of-clojure.file-name<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">defn</span> function-<span class="token number">1</span>
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token string">&quot;Hello from function-1&quot;</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">defn</span> function-<span class="token number">2</span>
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token string">&quot;Hello from function-2&quot;</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">defn</span> function-<span class="token number">3</span>
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token string">&quot;Hello from function-3&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; ...</span>
+</code></pre></div><h3 id="in-ns"><a href="#in-ns" class="header-anchor">#</a> in-ns</h3> <p><code>in-ns</code> allows you to switch to a specific namespace.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">in-ns</span> 'test<span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; #object[clojure.lang.Namespace 0x415156bf &quot;test&quot;]</span>
+
+<span class="token punctuation">(</span><span class="token keyword">in-ns</span> 'calculate<span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; #object[clojure.lang.Namespace 0x1ecfcbc9 &quot;calculate&quot;]</span>
+
+<span class="token punctuation">(</span><span class="token keyword">in-ns</span> 'some-other<span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; #object[clojure.lang.Namespace 0x660591fb &quot;some-ohter&quot;]</span>
+</code></pre></div><h3 id="require"><a href="#require" class="header-anchor">#</a> require</h3> <p>That you define in a namespace is not visible to other namespaces by default.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">ns</span> seven-days-of-clojure.calculate<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">defn</span> sum
+  <span class="token punctuation">[</span>a b<span class="token punctuation">]</span>
+    <span class="token punctuation">(</span><span class="token keyword">+</span> a b<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">defn</span> div
+  <span class="token punctuation">[</span>c d<span class="token punctuation">]</span>
+    <span class="token punctuation">(</span><span class="token keyword">/</span> c d<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">defn</span> mult
+  <span class="token punctuation">[</span>e f<span class="token punctuation">]</span>
+    <span class="token punctuation">(</span><span class="token keyword">*</span> e f<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>Note that if you try to access definitions in another namespace, an exception will be thrown.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token function">sum</span> <span class="token number">3</span> <span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; Unable to resolve symbol: sum in this context</span>
+</code></pre></div><p>To access other namespaces, use <code>require</code>.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token function">require</span> 'seven-days-of-clojure.calculate<span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; nill</span>
+
+<span class="token punctuation">(</span><span class="token function">seven-days-of-clojure.calculate/sum</span> <span class="token number">3</span> <span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 7</span>
+</code></pre></div><p>To create a namespace alias, use the <code>:as</code> keyword.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token function">require</span> '<span class="token punctuation">[</span>seven-days-of-clojure.calculate <span class="token symbol">:as</span> calc<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">calc/mult</span> <span class="token number">7</span> <span class="token number">7</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 49</span>
+
+<span class="token punctuation">(</span><span class="token function">calc/div</span> <span class="token number">4</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 2</span>
+
+<span class="token punctuation">(</span><span class="token function">calc/sum</span> <span class="token number">3</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 8</span>
+</code></pre></div><p>Load multiple namespaces.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token function">require</span> '<span class="token punctuation">[</span>seven-days-of-clojure.example <span class="token symbol">:as</span> eg<span class="token punctuation">]</span>
+         '<span class="token punctuation">[</span>clojure.core <span class="token symbol">:as</span> cc<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="test-your-knowledge"><a href="#test-your-knowledge" class="header-anchor">#</a> Test your knowledge</h2> <ul><li>Create a namespace with some functions and try to access them from another namespace.
+<ul><li>Tip: use <code>(in-ns' namespace-name)</code> to switch namespace).</li></ul></li> <li>Load a namespace using an alias for a short name.</li> <li>Load multiple namespaces and use at least one resource from each in the current namespace.</li> <li>Build your imagination.</li></ul> <h2 id="day-6-tests"><a href="#day-6-tests" class="header-anchor">#</a> Day 6 - Tests</h2> <p><a href="/day6">See more</a></p> <hr> <h2 id="license"><a href="#license" class="header-anchor">#</a> License</h2> <p>This project is licensed under the MIT License.</p> <p><a href="http://badges.mit-license.org" target="_blank" rel="noopener noreferrer"><img src="http://img.shields.io/:license-mit-black.svg?style=flat-square" alt="License"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e020f7bd.js" defer></script><script src="/assets/js/8.f8a27090.js" defer></script><script src="/assets/js/32.e6b70ee6.js" defer></script>
+  </body>
+</html>

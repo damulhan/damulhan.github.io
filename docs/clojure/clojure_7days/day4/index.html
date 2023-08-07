@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Day 4 – Functions | 프로그래밍 인 액션</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-FZZE483ETN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-FZZE483ETN');
+    </script>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.17886239.css" as="style"><link rel="preload" href="/assets/js/app.e020f7bd.js" as="script"><link rel="preload" href="/assets/js/8.f8a27090.js" as="script"><link rel="preload" href="/assets/js/31.338010b8.js" as="script"><link rel="prefetch" href="/assets/js/10.6fce9f60.js"><link rel="prefetch" href="/assets/js/11.2d17f5eb.js"><link rel="prefetch" href="/assets/js/12.bf59733f.js"><link rel="prefetch" href="/assets/js/13.a8b52d9b.js"><link rel="prefetch" href="/assets/js/14.c4af07a0.js"><link rel="prefetch" href="/assets/js/15.3d856255.js"><link rel="prefetch" href="/assets/js/16.588eccab.js"><link rel="prefetch" href="/assets/js/17.24b16851.js"><link rel="prefetch" href="/assets/js/18.a6039819.js"><link rel="prefetch" href="/assets/js/19.a4250e41.js"><link rel="prefetch" href="/assets/js/2.2e88546e.js"><link rel="prefetch" href="/assets/js/20.9ec3356e.js"><link rel="prefetch" href="/assets/js/21.c9b3acba.js"><link rel="prefetch" href="/assets/js/22.9f604d6b.js"><link rel="prefetch" href="/assets/js/23.40204a70.js"><link rel="prefetch" href="/assets/js/24.676de2f8.js"><link rel="prefetch" href="/assets/js/25.b990bbc9.js"><link rel="prefetch" href="/assets/js/26.e1d6b8b2.js"><link rel="prefetch" href="/assets/js/27.f39b7922.js"><link rel="prefetch" href="/assets/js/28.85f2eea3.js"><link rel="prefetch" href="/assets/js/29.f4594166.js"><link rel="prefetch" href="/assets/js/3.50da57f6.js"><link rel="prefetch" href="/assets/js/30.a6760802.js"><link rel="prefetch" href="/assets/js/32.e6b70ee6.js"><link rel="prefetch" href="/assets/js/33.59c1939e.js"><link rel="prefetch" href="/assets/js/34.583faad6.js"><link rel="prefetch" href="/assets/js/35.2284c2f2.js"><link rel="prefetch" href="/assets/js/36.5c184555.js"><link rel="prefetch" href="/assets/js/37.211de6f3.js"><link rel="prefetch" href="/assets/js/38.d5267f05.js"><link rel="prefetch" href="/assets/js/39.a4f11fcb.js"><link rel="prefetch" href="/assets/js/4.8b550d71.js"><link rel="prefetch" href="/assets/js/40.fce01b66.js"><link rel="prefetch" href="/assets/js/41.f6faa401.js"><link rel="prefetch" href="/assets/js/42.9526cc90.js"><link rel="prefetch" href="/assets/js/43.596505b1.js"><link rel="prefetch" href="/assets/js/44.7bb9afee.js"><link rel="prefetch" href="/assets/js/45.89ab27ec.js"><link rel="prefetch" href="/assets/js/46.798fa05d.js"><link rel="prefetch" href="/assets/js/47.f22eedc4.js"><link rel="prefetch" href="/assets/js/48.4e539c23.js"><link rel="prefetch" href="/assets/js/49.e0dcf2cc.js"><link rel="prefetch" href="/assets/js/5.c77d8215.js"><link rel="prefetch" href="/assets/js/50.8fd5c00e.js"><link rel="prefetch" href="/assets/js/51.10a49966.js"><link rel="prefetch" href="/assets/js/52.c24c9aa6.js"><link rel="prefetch" href="/assets/js/53.74e79606.js"><link rel="prefetch" href="/assets/js/54.a3a328dc.js"><link rel="prefetch" href="/assets/js/55.0a3d399c.js"><link rel="prefetch" href="/assets/js/56.2f14e2d2.js"><link rel="prefetch" href="/assets/js/57.6c246fdc.js"><link rel="prefetch" href="/assets/js/58.4140c313.js"><link rel="prefetch" href="/assets/js/59.01d487f7.js"><link rel="prefetch" href="/assets/js/6.a6e440e7.js"><link rel="prefetch" href="/assets/js/60.0446ff28.js"><link rel="prefetch" href="/assets/js/61.d5b6b1a7.js"><link rel="prefetch" href="/assets/js/62.dc942955.js"><link rel="prefetch" href="/assets/js/63.67a66c62.js"><link rel="prefetch" href="/assets/js/64.5a331cdf.js"><link rel="prefetch" href="/assets/js/65.5e04463c.js"><link rel="prefetch" href="/assets/js/66.cc32db40.js"><link rel="prefetch" href="/assets/js/67.3a6502c7.js"><link rel="prefetch" href="/assets/js/68.e543b947.js"><link rel="prefetch" href="/assets/js/69.c6c56c1c.js"><link rel="prefetch" href="/assets/js/7.fb50de22.js"><link rel="prefetch" href="/assets/js/70.4f7ed14a.js"><link rel="prefetch" href="/assets/js/71.8cf0b0df.js"><link rel="prefetch" href="/assets/js/9.c9de3d13.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.17886239.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">프로그래밍 인 액션</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/clojure/" class="nav-link router-link-active">
+  Clojure
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/clojure/" class="nav-link router-link-active">
+  Clojure
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>clojure books</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/clojure/clojure_distilled" class="sidebar-heading clickable open"><span>Clojure 증류하기 (Clojure Distilled)</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/clojure/clojure_distilled/01-Intro.html" class="sidebar-link">서문</a></li><li><a href="/clojure/clojure_distilled/02-Immutable.html" class="sidebar-link">함수형 언어의 이점</a></li><li><a href="/clojure/clojure_distilled/11-Clojure_In_Action.html" class="sidebar-link">클로저 인 액션(Clojure In Action)</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/clojure/clojure_spells" class="sidebar-heading clickable"><span>Clojure로 주문읽기(casting spells in clojure)</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>7 days of clojure</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>columns &amp; lectures</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>talks</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="day-4-functions"><a href="#day-4-functions" class="header-anchor">#</a> Day 4 – Functions</h1> <p>In Clojure functions are first-class objects, that is, it does all the basic operations with the object, such as passing it to a function, returning from a function, and binding it to a variable.</p> <blockquote><p>It is better to have 100 functions operate on one data structure than 10 functions on 10 data structures.
+— Alan Perlis</p></blockquote> <h3 id="calling-functions"><a href="#calling-functions" class="header-anchor">#</a> Calling functions</h3> <p>All Clojure operations have the same syntax: opening parentheses, operator, operands, closing parentheses.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token function">operator</span> operand1 operand2 operandn<span class="token punctuation">)</span>
+</code></pre></div><p>You may not have noticed, but so far you have seen many function calls.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">+</span> <span class="token number">2</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 7</span>
+
+<span class="token punctuation">(</span><span class="token keyword">first</span> <span class="token punctuation">[</span><span class="token number">3</span> <span class="token number">5</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 3</span>
+
+<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">or</span> + -<span class="token punctuation">)</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token comment">;; user&gt; 9</span>
+</code></pre></div><p>Generally, functions can use expressions as arguments, including other functions.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">inc</span> <span class="token number">1.1</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 2.1</span>
+
+<span class="token punctuation">(</span><span class="token keyword">map</span> inc <span class="token punctuation">[</span><span class="token number">0</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; (1 2 3 4)</span>
+</code></pre></div><p>The last thing you need to know about function calls is that Clojure evaluates all function arguments recursively before passing them to the function.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">+</span> <span class="token punctuation">(</span><span class="token keyword">inc</span> <span class="token number">70</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token keyword">*</span> <span class="token number">7</span> <span class="token punctuation">(</span><span class="token keyword">-</span> <span class="token number">13</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 155</span>
+
+<span class="token comment">;; (+ (inc 70) (* 7 (12)))</span>
+<span class="token comment">;; (+ (inc 70) 84)</span>
+<span class="token comment">;; (+ 71 84)</span>
+<span class="token comment">;; 155</span>
+</code></pre></div><h3 id="defining-functions"><a href="#defining-functions" class="header-anchor">#</a> Defining Functions</h3> <p>In Clojure, role definitions consist of five main parts:</p> <ul><li><code>defn</code></li> <li>Function name</li> <li>A docstring describing the function (optional)</li> <li>Parameters listed in brackets</li> <li>Function body</li></ul> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">defn</span> hello-name
+  <span class="token string">&quot;Return greetings to someone&quot;</span>
+    <span class="token punctuation">[</span>name<span class="token punctuation">]</span>
+      <span class="token punctuation">(</span><span class="token keyword">str</span> <span class="token string">&quot;Hello, &quot;</span> name <span class="token string">&quot;!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">hello-name</span> <span class="token string">&quot;John&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; &quot;Hello, John!&quot;</span>
+
+<span class="token punctuation">(</span><span class="token function">hello-name</span> <span class="token string">&quot;Rich&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; &quot;Hello, Rich!&quot;</span>
+
+<span class="token punctuation">(</span><span class="token function">hello-name</span> <span class="token string">&quot;Mark&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; &quot;Hello, Mark!&quot;</span>
+</code></pre></div><h3 id="the-docstring"><a href="#the-docstring" class="header-anchor">#</a> The docstring</h3> <p>The <code>docstring</code> is a useful way to describe and document your code. You can view the docstring for a function in the REPL with <code>(doc fn-name)</code> — for example, <code>(doc map)</code>.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">doc</span> hello-name<span class="token punctuation">)</span>
+<span class="token comment">;; user/hello-name</span>
+<span class="token comment">;; ([name])</span>
+<span class="token comment">;;   Return greetings to someone</span>
+<span class="token comment">;; nil</span>
+</code></pre></div><h3 id="parameters-and-arity"><a href="#parameters-and-arity" class="header-anchor">#</a> Parameters and Arity</h3> <p>Clojure functions can be defined with zero or more parameters and the number of parameters is the function’s arity.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token comment">;; 0-arity function</span>
+<span class="token punctuation">(</span><span class="token keyword">defn</span> no-params
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token string">&quot;I take no parameters!&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment">;; 1-arity function</span>
+<span class="token punctuation">(</span><span class="token keyword">defn</span> one-param
+  <span class="token punctuation">[</span>p<span class="token punctuation">]</span>
+  <span class="token punctuation">(</span><span class="token keyword">str</span> <span class="token string">&quot;I take one parameter: &quot;</span> p<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">;; 2-arity function</span>
+<span class="token punctuation">(</span><span class="token keyword">defn</span> two-params
+  <span class="token punctuation">[</span>p1 p2<span class="token punctuation">]</span>
+  <span class="token punctuation">(</span><span class="token keyword">str</span> <span class="token string">&quot;Two parameters! &quot;</span> p1 <span class="token string">&quot; and &quot;</span> p2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">;; multi-arity function</span>
+<span class="token punctuation">(</span><span class="token keyword">defn</span> multi-arity
+  <span class="token comment">;; 3-arity arguments and body</span>
+  <span class="token punctuation">(</span><span class="token punctuation">[</span>first-arg second-arg third-arg<span class="token punctuation">]</span>
+     <span class="token punctuation">(</span><span class="token function">do-things</span> first-arg second-arg third-arg<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token comment">;; 2-arity arguments and body</span>
+  <span class="token punctuation">(</span><span class="token punctuation">[</span>first-arg second-arg<span class="token punctuation">]</span>
+     <span class="token punctuation">(</span><span class="token function">do-things</span> first-arg second-arg<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token comment">;; 1-arity arguments and body</span>
+  <span class="token punctuation">(</span><span class="token punctuation">[</span>first-arg<span class="token punctuation">]</span>
+     <span class="token punctuation">(</span><span class="token function">do-things</span> first-arg<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>Clojure also lets you define arity-variable functions by including a rest parameter, which puts the rest of these arguments in a list.
+The rest parameter is indicated by an ampersand <code>&amp;</code>.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">defn</span> hello
+  <span class="token punctuation">[</span>guy<span class="token punctuation">]</span>
+    <span class="token punctuation">(</span><span class="token keyword">str</span> <span class="token string">&quot;Hello, &quot;</span> guy <span class="token string">&quot;!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">defn</span> bot-codger
+  <span class="token punctuation">[</span>&amp; guys<span class="token punctuation">]</span>
+    <span class="token punctuation">(</span><span class="token keyword">map</span> hello guys<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">bot-codger</span> <span class="token string">&quot;John&quot;</span> <span class="token string">&quot;Nathan&quot;</span> <span class="token string">&quot;Tony&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; (&quot;Hello, John!&quot; &quot;Hello, Nathan!&quot; &quot;Hello, Tony!&quot;)</span>
+</code></pre></div><h3 id="destructuring"><a href="#destructuring" class="header-anchor">#</a> Destructuring</h3> <p>The <code>destructuring</code> lets you link names to values within a collection.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">defn</span> first-element
+  <span class="token punctuation">[</span><span class="token punctuation">[</span>first-thing<span class="token punctuation">]</span><span class="token punctuation">]</span>
+  first-thing<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">first-element</span> <span class="token punctuation">[</span><span class="token symbol">:el1</span> <span class="token symbol">:el2</span> <span class="token symbol">:el3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; :el1</span>
+</code></pre></div><p>Clojure associate the name <code>lat</code> with the value corresponding to the key <code>:lat</code> (same for <code>lng</code>).</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">defn</span> location
+  <span class="token punctuation">[</span><span class="token punctuation">{</span>lat <span class="token symbol">:lat</span> lng <span class="token symbol">:lng</span><span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token punctuation">(</span><span class="token keyword">println</span> <span class="token punctuation">(</span><span class="token keyword">str</span> <span class="token string">&quot;lat: &quot;</span> lat<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token keyword">println</span> <span class="token punctuation">(</span><span class="token keyword">str</span> <span class="token string">&quot;lng: &quot;</span> lng<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">location</span> <span class="token punctuation">{</span><span class="token symbol">:lat</span> <span class="token number">28.22</span> <span class="token symbol">:lng</span> <span class="token number">81.33</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; lat: 28.22</span>
+<span class="token comment">;; user=&gt; lng: 81.33</span>
+</code></pre></div><h3 id="function-body"><a href="#function-body" class="header-anchor">#</a> Function body</h3> <p>The function body can contain any type and will always automatically return the last evaluated value.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">defn</span> another-function
+  <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">(</span><span class="token keyword">+</span> <span class="token number">1</span> <span class="token number">13</span><span class="token punctuation">)</span>
+  <span class="token number">21</span>
+  <span class="token string">&quot;function&quot;</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">another-function</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; &quot;function&quot;</span>
+
+<span class="token punctuation">(</span><span class="token keyword">defn</span> greater-than-<span class="token number">10</span>
+  <span class="token punctuation">[</span>n<span class="token punctuation">]</span>
+  <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">&gt;</span> n <span class="token number">10</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token keyword">str</span> n <span class="token string">&quot; is greater than 10&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token keyword">str</span> n <span class="token string">&quot; is not greater than 10&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token function">greater-than-</span><span class="token number">10</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token comment">;; =&gt;user &quot;5 is not greater than 10&quot;</span>
+
+<span class="token punctuation">(</span><span class="token function">greater-than-</span><span class="token number">10</span> <span class="token number">11</span><span class="token punctuation">)</span>
+<span class="token comment">;; =&gt;user &quot;11 is greater than 10&quot;</span>
+</code></pre></div><h3 id="anonymous-functions"><a href="#anonymous-functions" class="header-anchor">#</a> Anonymous Functions</h3> <p>In Clojure, functions don’t need to have names.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">fn</span> <span class="token punctuation">[</span>param<span class="token punctuation">]</span>
+  <span class="token symbol">:body</span><span class="token punctuation">)</span>
+</code></pre></div><p>You could even associate your anonymous function with a name.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">def</span> my-special-multiplier <span class="token punctuation">(</span><span class="token keyword">fn</span> <span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token punctuation">(</span><span class="token keyword">*</span> x <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token function">my-special-multiplier</span> <span class="token number">12</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 36</span>
+</code></pre></div><p>Clojure also offers another, more compact way to create anonymous functions by just adding the preceding <code>#</code>.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token operator">#</span><span class="token punctuation">(</span><span class="token keyword">*</span> % <span class="token number">3</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token operator">#</span><span class="token punctuation">(</span><span class="token keyword">*</span> % <span class="token number">3</span><span class="token punctuation">)</span> <span class="token number">8</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 24</span>
+
+<span class="token punctuation">(</span><span class="token keyword">map</span> <span class="token operator">#</span><span class="token punctuation">(</span><span class="token keyword">str</span> <span class="token string">&quot;Hi, &quot;</span> %<span class="token punctuation">)</span>
+     <span class="token punctuation">[</span><span class="token string">&quot;Annonymous&quot;</span> <span class="token string">&quot;Function&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; (&quot;Hi, Annonymous&quot; &quot;Hi, Function&quot;)</span>
+</code></pre></div><p><code>%</code>, indicates the argument passed to the function (<code>%1</code>, <code>%2</code>, <code>%3</code>, and so on).</p> <h3 id="return-functions"><a href="#return-functions" class="header-anchor">#</a> Return Functions</h3> <p>Functions may return other functions. The functions returned are <code>closures</code>, meaning they can access all variables that were in scope when the function was created.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">defn</span> inc-maker
+  <span class="token string">&quot;Create a custom incrementor&quot;</span>
+  <span class="token punctuation">[</span>inc-by<span class="token punctuation">]</span>
+  <span class="token operator">#</span><span class="token punctuation">(</span><span class="token keyword">+</span> % inc-by<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">def</span> inc3 <span class="token punctuation">(</span><span class="token function">inc-maker</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">inc3</span> <span class="token number">7</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; 10</span>
+</code></pre></div><p><code>inc-by</code> is in scope, so the returned function has access to it even when the returned function is used outside <code>inc-maker</code>.</p> <div class="language-clojure extra-class"><pre class="language-clojure"><code><span class="token punctuation">(</span><span class="token keyword">defn</span> inner
+  <span class="token punctuation">[</span>from-outer<span class="token punctuation">]</span>
+    <span class="token punctuation">(</span><span class="token keyword">fn</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">(</span><span class="token keyword">println</span> from-outer<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">def</span> fn1 <span class="token punctuation">(</span><span class="token function">inner</span> <span class="token string">&quot;this is from fn1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">def</span> fn2 <span class="token punctuation">(</span><span class="token function">inner</span> <span class="token string">&quot;this is yet another from fn2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">fn1</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; this is from fn1</span>
+<span class="token comment">;; user=&gt; nil</span>
+
+<span class="token punctuation">(</span><span class="token function">fn2</span><span class="token punctuation">)</span>
+<span class="token comment">;; user=&gt; this is from fn2</span>
+<span class="token comment">;; user=&gt; nil</span>
+</code></pre></div><h2 id="test-your-knowledge"><a href="#test-your-knowledge" class="header-anchor">#</a> Test your knowledge</h2> <ul><li><p>Define a function always-thing which takes any number of arguments, ignores all of them, and returns the number 100.</p></li> <li><p>Create a function that calculates the cube of a given number.</p></li> <li><p>Define a function one-less-arg that takes two arguments:</p> <ul><li>f, a function</li> <li>x, a value</li></ul></li> <li><p>and returns another function which calls f on x plus any additional arguments.</p></li></ul> <h2 id="day-5-namespaces"><a href="#day-5-namespaces" class="header-anchor">#</a> Day 5 - Namespaces</h2> <p><a href="/day5">See more</a></p> <hr> <h2 id="license"><a href="#license" class="header-anchor">#</a> License</h2> <p>This project is licensed under the MIT License.</p> <p><a href="http://badges.mit-license.org" target="_blank" rel="noopener noreferrer"><img src="http://img.shields.io/:license-mit-black.svg?style=flat-square" alt="License"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e020f7bd.js" defer></script><script src="/assets/js/8.f8a27090.js" defer></script><script src="/assets/js/31.338010b8.js" defer></script>
+  </body>
+</html>
